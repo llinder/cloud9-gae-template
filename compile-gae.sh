@@ -1,18 +1,18 @@
 function install_python27 {
-    wget http://www.python.org/ftp/python/2.7.3/Python-2.7.3.tgz
-    tar xvfz Python-2.7.3.tgz
-    cd Python-2.7.3 
+    wget http://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz
+    tar xvfz Python-2.7.5.tgz
+    cd Python-2.7.5 
     ./configure --prefix=$HOME
     make
     make install
     cd ..
-    rm -rf Python-2.7.3*
+    rm -rf Python-2.7.5*
 }
 
 function install_appengine {
-    wget http://googleappengine.googlecode.com/files/google_appengine_1.7.2.zip
-    unzip google_appengine_1.7.2.zip
-    rm google_appengine_1.7.2.zip
+    wget http://googleappengine.googlecode.com/files/google_appengine_1.8.0.zip
+    unzip google_appengine_1.8.0.zip
+    rm google_appengine_1.8.0.zip
     mv google_appengine ../lib/
     cd ../bin/
     ln -s ../lib/google_appengine/*.py .
